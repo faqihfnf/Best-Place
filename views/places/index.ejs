@@ -1,0 +1,12 @@
+<% layout("layout/app") %>
+
+    <h1>All Places</h1>
+    <a href="/places/create">Add Place</a>
+    <ul>
+        <% for (const place of places) { %>
+            <li><a href="/places/<%= place._id %>">
+                    <%= place.title %>
+                </a>
+            </li>
+            <% } %>
+    </ul>
